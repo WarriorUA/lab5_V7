@@ -7,7 +7,7 @@ namespace Lab2_V7
     {
         static void Main(string[] args)
         {
-            List<Student> students = new List<Student>();
+            Queue<Student> students = new Queue<Student>();
             int countV = 0;
             int countO = 0;
             int countP1 = 0;
@@ -24,7 +24,7 @@ namespace Lab2_V7
                 timeV = int.Parse(Console.ReadLine());
                 Console.WriteLine("Vvedite kolichestvo opravdanuh chasov:");
                 timeO = int.Parse(Console.ReadLine());
-                students.Add(new Student(timeName, timeV, timeO));
+                students.Enqueue(new Student(timeName, timeV, timeO));
                 Console.WriteLine("Vi hotite prodolzhit?(Y/N)");
                 string otvet = Console.ReadLine();
                 if (otvet == "Y") continueProgram = true;
